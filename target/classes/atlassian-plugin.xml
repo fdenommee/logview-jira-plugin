@@ -1,0 +1,24 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}"/>
+		<application-version min="4.0" max="4.2"/>
+	</plugin-info>
+
+	<resource type="i18n" name="i18n" location="i18n/logview"/>
+
+	<web-item key="logview.system.menu" i18n-name-key="logview.system.menu" section="system.admin/system">
+		<label key="logview.system.menu"/>
+		<link linkId="logview-show"><![CDATA[/secure/LogViewShow.jspa?decorator=admin&n=200]]></link>
+	</web-item>
+
+	<webwork1 key="logview.actions" name="LogView Actions" class="java.lang.Object" roles-required="use">
+		<actions>
+			<action name="com.pyxis.jira.logview.actions.LogViewAction" alias="LogViewShow">
+				<view name="success">/templates/plugins/logview/show.vm</view>
+			</action>
+		</actions>
+	</webwork1>
+
+</atlassian-plugin>
