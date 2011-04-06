@@ -1,7 +1,7 @@
 LogView Jira Plugin
 ===================
 
-A simple ${jira.home}/logs/atlassian-jira.log viewer
+A simple ${jira.home}/log/atlassian-jira.log viewer
 
 CREDITS
 =======
